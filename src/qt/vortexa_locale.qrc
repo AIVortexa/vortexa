@@ -1,0 +1,25 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ar">locale/vortexa_ar.qm</file>
+        <file alias="bg">locale/vortexa_bg.qm</file>
+        <file alias="de">locale/vortexa_de.qm</file>
+        <file alias="en">locale/vortexa_en.qm</file>
+        <file alias="es">locale/vortexa_es.qm</file>
+        <file alias="fi">locale/vortexa_fi.qm</file>
+        <file alias="fr">locale/vortexa_fr.qm</file>
+        <file alias="it">locale/vortexa_it.qm</file>
+        <file alias="ja">locale/vortexa_ja.qm</file>
+        <file alias="ko">locale/vortexa_ko.qm</file>
+        <file alias="nl">locale/vortexa_nl.qm</file>
+        <file alias="pl">locale/vortexa_pl.qm</file>
+        <file alias="pt">locale/vortexa_pt.qm</file>
+        <file alias="ro">locale/vortexa_ro.qm</file>
+        <file alias="ru">locale/vortexa_ru.qm</file>
+        <file alias="sk">locale/vortexa_sk.qm</file>
+        <file alias="th">locale/vortexa_th.qm</file>
+        <file alias="tr">locale/vortexa_tr.qm</file>
+        <file alias="vi">locale/vortexa_vi.qm</file>
+        <file alias="zh_CN">locale/vortexa_zh_CN.qm</file>
+        <file alias="zh_TW">locale/vortexa_zh_TW.qm</file>
+    </qresource>
+</RCC>

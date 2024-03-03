@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Vortexa Core
+Comment=Vortexa P2P Cryptocurrency
+Comment[de]=Verbinde mit dem Vortexa peer-to-peer Netzwerk
+Comment[fr]=Vortexa, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Vortexa, eşten eşe kriptografik sanal para birimi
+Exec=vortexa-qt %u
+Terminal=false
+Type=Application
+Icon=vortexa128
+MimeType=x-scheme-handler/vortexa;
+Categories=Office;Finance;
+StartupWMClass=Vortexa-qt

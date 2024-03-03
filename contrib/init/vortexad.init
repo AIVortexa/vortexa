@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  vortexad The Vortexa Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: vortexad
+# processname: vortexad
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/vortexad, see below
+if [ -f /etc/sysconfig/vortexad ]; then
+        . /etc/sysconfig/vortexad
+fi
+
+RETVAL=0
+
+prog=vortexad
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/vortexad
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/vortexad}
+
+# vortexad defaults to /usr/bin/vortexad, override with BITCOIND_BIN
+vortexad=${BITCOIND_BIN-/usr/bin/vortexad}
+
+# vortexad opts default to -disablewallet, override with BITCOIND_OPTS
+vortexad_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $vortexad $vortexad_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
